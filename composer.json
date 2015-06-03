@@ -1,0 +1,14 @@
+{
+    "name": "flooris/fmapi",
+    "authors": [
+        {
+            "name": "Jeffrey van Barneveld",
+            "email": "jeffrey@flooris.nl"
+        }
+    ],
+    "autoload": {
+      "psr-0" : {
+        "" : "src"
+      }
+    }
+}
