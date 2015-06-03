@@ -2,8 +2,7 @@
     "name": "flooris/fmapi",
     "authors": [
         {
-            "name": "Flooris,
-            "email": "jeffrey@flooris.nl"
+            "name": "Flooris",
         }
     ],
     "autoload": {
