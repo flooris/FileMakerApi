@@ -1,7 +1,5 @@
 <?php
 
-namespace Flooris\FMApi;
-
 class FileMakerRecordObject {
 	
 	public $record;

@@ -1,14 +1,17 @@
 {
-    "name": "flooris/fmapi",
-    "authors": [
-        {
-            "name": "Flooris"
-        }
-    ],
-    "license": "MIT",
-    "autoload": {
-      "psr-0" : {
-        "Flooris\\FMApi\\" : "src"
-      }
+  "name": "flooris/fmapi",
+  "authors": [
+    {
+      "name": "Flooris"
     }
+  ],
+  "license": "MIT",
+  "autoload": {
+    "classmap" : [
+      "src/FileMaker.php",
+      "src/FileMakerApi.php",
+      "src/FileMakerRecordObject.php",
+      "src/FileMakerHelper.php"
+    ]
+  }
 }

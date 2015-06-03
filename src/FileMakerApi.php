@@ -1,7 +1,5 @@
 <?php
 
-namespace Flooris\FMApi;
-
 class FileMakerApi extends FileMaker {
 
 	private $layoutName = '';

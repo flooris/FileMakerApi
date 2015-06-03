@@ -78,8 +78,6 @@ define('FILEMAKER_LOG_INFO', 6);
 define('FILEMAKER_LOG_DEBUG', 7);
 /**#@-*/
 
-namespace Flooris\FMApi;
-
 /**
  * Base FileMaker class. Defines database properties, connects to a database, 
  * and gets information about the API.

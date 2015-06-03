@@ -1,7 +1,5 @@
 <?php
 
-namespace Flooris\FMApi;
-
 class FileMakerHelper extends Tools {
 	public static function Normalize($str = '', $max_length = 0, $remove_newlines = false) {
 		

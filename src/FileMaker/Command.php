@@ -18,7 +18,7 @@
  */
 require_once dirname(__FILE__) . '/Implementation/CommandImpl.php';
 /**#@-*/
-namespace Flooris\FMApi;
+
 /**
  * Base Command class. Represents commands that add records, delete records, 
  * duplicate records, edit records, perform find requests, and perform 
