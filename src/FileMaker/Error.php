@@ -17,10 +17,7 @@
  * @ignore Makes sure that the PEAR base class is loaded. Falls back to a
  * bundled version if it's not found in the include_path.
  */
-//@include_once 'PEAR.php';
-/*if (!class_exists('PEAR_Error')) {
-    include_once 'FileMaker/PEAR.php';
-}*/
+@include_once 'PEAR.php';
 /**#@-*/
 
 /**
