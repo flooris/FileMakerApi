@@ -5,6 +5,7 @@
             "name": "Flooris"
         }
     ],
+    "license": "MIT",
     "autoload": {
       "psr-0" : {
         "" : "src"
