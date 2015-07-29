@@ -1,6 +1,6 @@
 <?php
 
-class FileMakerHelper extends Tools {
+class FileMakerHelper {
 	public static function Normalize($str = '', $max_length = 0, $remove_newlines = false) {
 		
 		$encoding = 'UTF-8';

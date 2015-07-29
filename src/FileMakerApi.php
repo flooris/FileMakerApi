@@ -21,6 +21,7 @@ class FileMakerApi extends FileMaker {
 		$this->layoutName		= $layoutName;
 		$this->host			    = $hostspec;
 		$this->database			= $database;
+		$this->username			= $username;
 		$this->password			= $password;
 		$this->throwException	= $throwException;
 	}
