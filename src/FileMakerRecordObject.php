@@ -94,14 +94,14 @@ class FileMakerRecordObject {
 			 * Datum en Tijd gewoon als string verwerken...
 			 * Er is nog geen situatie waarbij we een DateTime object nodig hebben...
 			 */
-			/*case 'timestamp':
-				$this->resultObj->$objFieldName = FileMakerHelper::GetTimeStamp($record, $fieldName);
+			case 'timestamp':
+				$result = FileMakerHelper::GetTimeStamp($record, $fieldName);
 				break;
 
 			case 'date':
-				$this->resultObj->$objFieldName = FileMakerHelper::GetDate($record, $fieldName);
-				break;*/
-
+				$result = FileMakerHelper::GetDate($record, $fieldName);
+				break;
+			
 			default:
 				$result = $record->getField($fieldName);
 				break;
