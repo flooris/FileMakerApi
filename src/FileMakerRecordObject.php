@@ -101,7 +101,7 @@ class FileMakerRecordObject {
 			case 'date':
 				$result = FileMakerHelper::GetDate($record, $fieldName);
 				break;
-			
+
 			default:
 				$result = $record->getField($fieldName);
 				break;
