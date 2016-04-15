@@ -53,7 +53,7 @@ return $this->_fields[$V06e3d36f][$V6d786dc7];
 if (FileMaker::isError($V2063c160)) {
  return $V2063c160;
 }
-$V06e3d36f =& $this->_layout->getField($V972bf3f0);
+$V06e3d36f = $this->_layout->getField($V972bf3f0);
 if (FileMaker::isError($V06e3d36f)) {
  return $V06e3d36f;
 }
@@ -266,7 +266,7 @@ foreach ($V268184c1 as $V1b7d5726) {
 break;
 }
 }
-return new FileMaker_Error('Failed to find the updated child in the response.');
+return new FileMaker_Error($this->_fm, 'Failed to find the updated child in the response.');
 }
  function _updateFrom(&$Vde17f0f2)
  {
