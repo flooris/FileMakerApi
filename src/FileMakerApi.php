@@ -17,7 +17,7 @@ class FileMakerApi extends FileMaker {
 	public $foundSetCount;
 	public $fetchCount;
 
-	public function __construct($layoutName, $database = NULL, $hostspec = NULL, $username = NULL, $password = NULL, $throwException = 0) {
+	public function __construct($layoutName = null, $database = NULL, $hostspec = NULL, $username = NULL, $password = NULL, $throwException = 0) {
 		$this->layoutName		= $layoutName;
 		$this->host			    = $hostspec;
 		$this->database			= $database;
@@ -26,6 +26,10 @@ class FileMakerApi extends FileMaker {
 		$this->throwException	= $throwException;
 	}
 
+	public function setLayout($layoutName)
+	{
+		$this->layoutName = $layoutName;
+	}
 
 	/*
 	 * FIND
@@ -82,7 +86,11 @@ class FileMakerApi extends FileMaker {
 	}
 
 	public function findRecords($criteria) {
-		if($this->layoutName == '' || count($criteria) == 0)
+		if( ! $this->layoutName ) {
+			throw new Exception("Layout has to be set");
+		}
+
+		if(count($criteria) == 0)
 			return 0;
 
 		$fm = $this->newFileMaker();
