@@ -359,8 +359,7 @@ $this->_setCurlWPCSessionCookie($Vd88fc6ed);
  if ($this->getProperty('username')) { 
  $V313225f0 = base64_encode(utf8_decode($this->getProperty('username')). ':' . utf8_decode($this->getProperty('password')));
 $V44914468 = 'Authorization: Basic ' . $V313225f0;
-//curl_setopt($Vd88fc6ed, CURLOPT_HTTPHEADER, array('Content-Type: application/x-www-form-urlencoded; charset=utf-8', 'X-FMI-PE-ExtendedPrivilege: IrG6U+Rx0F5bLIQCUb9gOw==', $V44914468));
-curl_setopt($Vd88fc6ed, CURLOPT_HTTPHEADER, array('Content-Type: application/x-www-form-urlencoded; charset=utf-8', $V44914468));
+curl_setopt($Vd88fc6ed, CURLOPT_HTTPHEADER, array('Content-Type: application/x-www-form-urlencoded; charset=utf-8', 'X-FMI-PE-ExtendedPrivilege: IrG6U+Rx0F5bLIQCUb9gOw==', $V44914468));
 }else{
  curl_setopt($Vd88fc6ed, CURLOPT_HTTPHEADER, array('Content-Type: application/x-www-form-urlencoded; charset=utf-8', 'X-FMI-PE-ExtendedPrivilege: IrG6U+Rx0F5bLIQCUb9gOw=='));
 }
