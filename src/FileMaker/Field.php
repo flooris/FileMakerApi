@@ -41,7 +41,7 @@ class FileMaker_Field
      *
      * @param FileMaker_Layout &$layout Parent Layout object.
      */
-    function FileMaker_Field($layout)
+    public function __construct($layout)
     {
         $this->_impl = new FileMaker_Field_Implementation($layout);
     }

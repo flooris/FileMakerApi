@@ -43,7 +43,7 @@ class FileMaker_Error extends PEAR_Error
      * @param string $message Error message.
      * @param integer $code Error code.
      */
-    function FileMaker_Error(&$fm, $message = null, $code = null)
+    public function __construct(&$fm, $message = null, $code = null)
     {
         $this->_fm =& $fm;
         parent::PEAR_Error($message, $code);
