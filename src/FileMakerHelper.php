@@ -52,12 +52,40 @@ class FileMakerHelper {
 		return $result;
 	}
 
-	public static function GetTimeStamp($record, $fieldName) {
-		$valueString = $record->getField($fieldName);
+	public static function GetTimeStamp($record, $field_name) {
+		$value_string = $record->getField($field_name);
 
-		$result = $valueString;
+		if ( ! $value_string ) {
+			return $value_string;
+		}
 
-		return $result;
+		$delimiter = "/";
+		if ( ! strstr($value_string, $delimiter) ) {
+			$delimiter = "-";
+
+			if ( ! strstr($value_string, $delimiter) ) {
+				throw new Exception("Field value is not a valid date! Delimiter does not exist inside the value string! Value: {$value_string}");
+			}
+		}
+
+		$timestamp_parts = explode(" ", $value_string);
+		if ( ! count($timestamp_parts) ) {
+			return '';
+		}
+
+		$date_part = $timestamp_parts[0];
+		$time_part = $timestamp_parts[1];
+
+
+		$splitted_date_array = explode($delimiter, $date_part);
+
+		$month 	= $splitted_date_array[0];
+		$day 	= $splitted_date_array[1];
+		$year 	= $splitted_date_array[2];
+
+		$unix_timestamp_date = strtotime("$year-$month-$day $time_part");
+
+		return $unix_timestamp_date;
 	}
 
 	public static function GetDate($record, $field_name, $date_delimiter = "-") {
