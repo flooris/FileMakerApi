@@ -33,6 +33,10 @@ class FileMakerRecordObject {
 
 		foreach($this->fields as $fieldName => $field) {
 
+			if ( ! $fieldName ) {
+				continue;
+			}
+
 			$type = $field->getResult();
 
 			$objFieldName	= $this->GetFriendlyObjectFieldName($fieldName);
