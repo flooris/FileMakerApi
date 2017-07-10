@@ -12,6 +12,12 @@
       "src/FileMakerApi.php",
       "src/FileMakerRecordObject.php",
       "src/FileMakerHelper.php"
-    ]
+    ],
+    "psr-4": {
+      "Flooris\\FilemakerApi\\": "src/"
+    }
+  },
+  "require": {
+    "illuminate/support": "^5.4"
   }
 }

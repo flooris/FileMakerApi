@@ -6,7 +6,7 @@
  var $Vea4b3413 = null;
 
  var $V9a3dcbce;
- function getAPIVersion()
+ static function getAPIVersion()
  {
  return '1.1';
 }
