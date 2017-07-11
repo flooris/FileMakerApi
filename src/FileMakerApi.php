@@ -24,6 +24,8 @@ class FileMakerApi extends FileMaker {
 		$this->username			= $username;
 		$this->password			= $password;
 		$this->throwException	= $throwException;
+
+		parent::__construct($database, $hostspec, $username, $password);
 	}
 
 	public function setLayout($layoutName)
