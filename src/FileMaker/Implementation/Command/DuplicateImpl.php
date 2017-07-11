@@ -2,9 +2,9 @@
   require_once dirname(__FILE__) . '/../CommandImpl.php';
  class FileMaker_Command_Duplicate_Implementation extends FileMaker_Command_Implementation
 {
-  function __construct($V0ab34ca9, $Vc6140495, $Va6ec9c02)
+  function __construct($filemaker, $layout, $Va6ec9c02)
  {
- FileMaker_Command_Implementation::__construct($V0ab34ca9, $Vc6140495);
+ FileMaker_Command_Implementation::__construct($filemaker, $layout);
 $this->_recordId = $Va6ec9c02;
 }
  function &execute()

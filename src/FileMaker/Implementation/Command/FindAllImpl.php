@@ -2,8 +2,8 @@
   require_once dirname(__FILE__) . '/FindImpl.php';
  class FileMaker_Command_FindAll_Implementation extends FileMaker_Command_Find_Implementation
 {
-  function __construct($V0ab34ca9, $Vc6140495) {
- FileMaker_Command_Find_Implementation::__construct($V0ab34ca9, $Vc6140495);
+  function __construct($filemaker, $layout) {
+ FileMaker_Command_Find_Implementation::__construct($filemaker, $layout);
 }
 
   function &execute()

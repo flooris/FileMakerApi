@@ -220,7 +220,7 @@ class FileMaker
      *
      * @param string $layout Layout that the record is part of.
      * @param string $recordId ID of the record to edit.
-     * @param array $updatedValues Associative array of field name => value 
+     * @param array $updatedValues Associative array of field name => value
      *        pairs that contain the updated field values. To set field 
      *        repetitions, use a numerically indexed array for the value of a 
      *        field, with the numeric keys corresponding to the repetition 

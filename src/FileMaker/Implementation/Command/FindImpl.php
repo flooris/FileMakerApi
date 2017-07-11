@@ -11,9 +11,9 @@
 
   var $V6da136ea;
  var $V568aa2ec;
- public function __construct($V0ab34ca9, $Vc6140495)
+ public function __construct($filemaker, $layout)
  {
- FileMaker_Command_Implementation::__construct($V0ab34ca9, $Vc6140495);
+ FileMaker_Command_Implementation::__construct($filemaker, $layout);
 }
  function &execute()
  { 
