@@ -92,7 +92,7 @@ class FileMakerApi extends FileMaker {
 			throw new Exception("Layout has to be set");
 		}
 
-		if(count($criteria) == 0)
+		if( ! is_array($criteria) || count($criteria) == 0 )
 			return 0;
 
 		$fm = $this->newFileMaker();
@@ -238,7 +238,7 @@ class FileMakerApi extends FileMaker {
 	 * EXTENDED FILEMAKER FUNCTIONS
 	 */
 	private function addSortRules($findCommand) {
-		if(count($this->sortCriteria)) {
+		if(is_array($this->sortCriteria) && count($this->sortCriteria)) {
 
 			$sortIndex = 1;
 			foreach($this->sortCriteria as $fieldName => $sortDirection) {
@@ -251,7 +251,7 @@ class FileMakerApi extends FileMaker {
 	}
 
 	private function addFindRange($findCommand) {
-		if(count($this->findRange)) {
+		if(is_array($this->findRange) && count($this->findRange)) {
 
 			foreach($this->findRange as $start => $end) {
 				if($end > 0) {
